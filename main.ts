@@ -59,8 +59,15 @@ TM1650.showNumber(100)
 while (!(input.buttonIsPressed(Button.A))) {
     停止()
 }
-basic.showIcon(IconNames.Heart)
 basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
     if (ps2controller.button_pressed(ps2controller.PS2Button.Up) == 1) {
         前进()
     } else if (ps2controller.button_pressed(ps2controller.PS2Button.Down) == 1) {
